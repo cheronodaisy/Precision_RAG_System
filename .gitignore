@@ -1,6 +1,8 @@
 # Environments
 .env
 myenv/
+app/__pycache__
+
 # Examples
 src/
 prompts/
