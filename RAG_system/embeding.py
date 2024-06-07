@@ -24,10 +24,8 @@ def run():
         print('split docs:', docs)
 
         print('creating vector store...')
-        # Create and store the embeddings in the vector store
         embeddings = OpenAIEmbeddings()
 
-        # Access Pinecone API key from environment variables
         pinecone_api_key = os.getenv('PINECONE_API_KEY')
 
         # Initialize Pinecone client
@@ -37,10 +35,10 @@ def run():
             pc.create_index(
                 name=PINECONE_INDEX_NAME, 
                 dimension=1536, 
-                metric='cosine',  # You can change the metric if needed
+                metric='cosine',
                 spec=ServerlessSpec(
                     cloud='aws',
-                    region='us-east-1'  # Change the region if needed
+                    region='us-east-1'
                 )
             )
 
