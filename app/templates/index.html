@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt Generation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Prompt Generation System</h1>
+    <form action="/generate" method="post">
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description" required><br>
+        <label for="scenarios">Scenarios (comma separated):</label><br>
+        <input type="text" id="scenarios" name="scenarios" required><br><br>
+        <input type="submit" value="Generate Prompts">
+    </form>
+</body>
+</html>

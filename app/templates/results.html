@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Prompts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="results">
+        <h1>Generated Prompts</h1>
+        <p>Description: {{ description }}</p>
+        <form action="/rank" method="post">
+            {% for prompt, score in prompts %}
+                <p>Prompt: {{ prompt }} | Score: {{ score }}</p>
+                <input type="hidden" name="prompts" value="{{ prompt }}">
+            {% endfor %}
+            <input type="hidden" name="description" value="{{ description }}">
+            <input type="submit" value="Rank Prompts">
+        </form>
+    </div>
+</body>
+</html>
