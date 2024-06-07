@@ -2,7 +2,6 @@ import random
 
 class PromptRanker:
     def monte_carlo_matchmaking(self, prompts, test_cases):
-        # Example ranking algorithm
         results = []
         for prompt in prompts:
             score = 0
