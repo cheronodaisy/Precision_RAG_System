@@ -19,7 +19,7 @@ class PromptGenerationSystem:
                 n=5
             )
             for choice in response.choices:
-                prompts.append(choice.text.strip())
+                prompts.append(choice['text'].strip())
         return prompts
 
     def evaluate_prompts(self, description, prompts):
