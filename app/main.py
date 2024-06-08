@@ -24,6 +24,6 @@ def generate():
 def rank():
     prompts = request.form.getlist('prompts')
     description = request.form['description']
-    test_cases = generator.generate_test_cases(description)
+    test_cases = generator.generate_random_test_cases(description, num_test_cases=10)
     ranked_prompts = ranker.monte_carlo_matchmaking(prompts, test_cases)
     return render_template('ranking.html', ranked_prompts=ranked_prompts)
