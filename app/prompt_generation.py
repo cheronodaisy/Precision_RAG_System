@@ -1,8 +1,12 @@
+import os
+from dotenv import load_dotenv
 import openai
+
+load_dotenv()
 
 class PromptGenerationSystem:
     def __init__(self):
-        openai.api_key = ''
+        openai.api_key = os.getenv("OPENAI_API_KEY")
 
     def generate_prompts(self, description, scenarios):
         prompts = []
