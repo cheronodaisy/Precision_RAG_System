@@ -30,8 +30,6 @@ This service evaluates and ranks different prompts based on their effectiveness.
     pip install -r requirements.txt
     ```
 
-### Usage
-
 
 ## Contributing
 Contributions are welcome! To contribuute, add an issue or fork the repository
